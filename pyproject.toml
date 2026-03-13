@@ -1,0 +1,16 @@
+[project]
+name = "jma-sst-downloader"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "cartopy>=0.25.0",
+    "numpy>=2.4.3",
+    "pandas<3",
+    "pyinstaller>=6.19.0",
+    "pyqt6>=6.10.2",
+    "requests>=2.32.5",
+    "scipy>=1.17.1",
+    "streamlit>=1.35.0",
+]
