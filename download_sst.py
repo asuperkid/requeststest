@@ -1,5 +1,5 @@
-import requests
-import numpy as np
+import requests  # type: ignore
+import numpy as np  # type: ignore
 from datetime import datetime
 
 def fetch_himawari_sst_data(date: datetime):
@@ -45,7 +45,7 @@ def parse_himawari_sst(text):
     
     # Records 2-601: Data
     grid = []
-    for line in lines[1:601]:
+    for line in lines[1:601]:  # type: ignore
         # The data consists of 800 values, each 3 digits wide.
         # Spacing may be inconsistent. Remove all spaces.
         clean_line = line.replace(" ", "").replace("\t", "").replace("\r", "")
@@ -65,7 +65,7 @@ def parse_himawari_sst(text):
         if len(row_values) < 800:
             row_values.extend([999] * (800 - len(row_values)))
         elif len(row_values) > 800:
-            row_values = row_values[:800]
+            row_values = row_values[:800]  # type: ignore
             
         grid.append(row_values)
 

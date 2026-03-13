@@ -1,4 +1,4 @@
-import requests
+import requests  # type: ignore
 
 def debug_sst(url):
     print("\n" + "="*50)
@@ -10,7 +10,7 @@ def debug_sst(url):
     print(f"Total lines: {len(lines)}")
     from collections import Counter
     lengths = [len(l.replace(" ", "").replace("\r", "")) for l in lines]
-    print(f"Lengths counter (Sorted): {sorted(Counter(lengths).items())}")
+    print(f"Lengths counter (Sorted): {sorted(Counter(lengths).items())}")  # type: ignore
 
 if __name__ == "__main__":
     debug_sst('https://www.data.jma.go.jp/goos/data/pub/JMA-product/him_sst_pac_D/2026/him_sst_pac_D20260101.txt')
